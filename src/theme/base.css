@@ -1,0 +1,86 @@
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background font-sans text-foreground;
+    background-image:
+      radial-gradient(circle at 12% 8%, color-mix(in oklch, var(--primary) 26%, transparent) 0, transparent 22%),
+      radial-gradient(circle at 88% 10%, color-mix(in oklch, var(--accent) 24%, transparent) 0, transparent 18%),
+      radial-gradient(circle at 50% 100%, color-mix(in oklch, var(--chart-4) 16%, transparent) 0, transparent 28%),
+      linear-gradient(180deg, color-mix(in oklch, var(--background) 94%, black) 0%, color-mix(in oklch, var(--background) 82%, black) 100%);
+    min-height: 100vh;
+    line-height: 1.6;
+    letter-spacing: -0.01em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-heading);
+    font-weight: 900;
+    letter-spacing: calc(var(--tracking-display) * 0.8);
+    line-height: 1;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background:
+      linear-gradient(
+        to bottom,
+        color-mix(in oklch, var(--foreground) 3%, transparent) 1px,
+        transparent 1px
+      );
+    background-size: 100% 32px;
+    mask-image: linear-gradient(to bottom, black, transparent 55%);
+    opacity: 0.3;
+  }
+
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background:
+      linear-gradient(115deg, color-mix(in oklch, var(--primary) 10%, transparent), transparent 34%),
+      linear-gradient(245deg, color-mix(in oklch, var(--accent) 8%, transparent), transparent 38%);
+    mix-blend-mode: screen;
+    opacity: 0.55;
+  }
+
+  ::selection {
+    background: color-mix(in oklch, var(--primary) 20%, white);
+    color: var(--foreground);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+@media (max-width: 767px) {
+  @layer base {
+    body::before,
+    body::after {
+      display: none;
+    }
+  }
+}
