@@ -12,7 +12,7 @@ export function ContactCtaSection() {
         <CardContent className="grid gap-8 p-5 sm:p-8 lg:grid-cols-[1fr_auto] lg:items-end">
           <SectionHeader
             eyebrow="Next step"
-            title="Hiring or building something?"
+            title="Hiring Me and Turn Your Idea Into Reality"
             description="Let’s discuss the scope, timeline, and next step."
           />
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
