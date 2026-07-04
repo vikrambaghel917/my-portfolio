@@ -84,7 +84,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
 export const SERVICE_PACKAGES: ServicePackage[] = [
   {
     name: "Landing Page",
-    price: "Starting at ₹10,000",
+    price: "Starting at ₹15,000",
     timeline: "1-2 weeks",
     bestFor: "Single-page launches, campaigns, and lead generation.",
     includes: [
@@ -102,7 +102,7 @@ export const SERVICE_PACKAGES: ServicePackage[] = [
   },
   {
     name: "Business Website",
-    price: "Starting at ₹45,000",
+    price: "Starting at ₹20,000",
     timeline: "2-3 weeks",
     bestFor: "Companies needing a multi-page site with clear service positioning.",
     includes: [
@@ -120,8 +120,8 @@ export const SERVICE_PACKAGES: ServicePackage[] = [
   },
   {
     name: "Web App MVP",
-    price: "Starting at ₹85,000",
-    timeline: "4-6 weeks",
+    price: "Starting at ₹45,000",
+    timeline: "5-7 weeks",
     bestFor: "Dashboards, internal tools, SaaS MVPs, and operational products.",
     includes: [
       "Authentication",
@@ -138,7 +138,7 @@ export const SERVICE_PACKAGES: ServicePackage[] = [
   },
   {
     name: "E-Commerce Build",
-    price: "Starting at ₹95,000",
+    price: "Starting at ₹80,000",
     timeline: "4-6 weeks",
     bestFor: "Online stores needing custom product, checkout, and admin flows.",
     includes: [
@@ -156,7 +156,7 @@ export const SERVICE_PACKAGES: ServicePackage[] = [
   },
   {
     name: "Mobile App MVP",
-    price: "Starting at ₹1,10,000",
+    price: "Starting at ₹80,000",
     timeline: "5-8 weeks",
     bestFor: "Businesses launching a first mobile app for Android and iOS.",
     includes: [

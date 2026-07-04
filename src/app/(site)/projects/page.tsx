@@ -1,3 +1,4 @@
+﻿import type { Metadata } from "next";
 import {
   BriefcaseBusinessIcon,
   FolderKanbanIcon,
@@ -7,7 +8,17 @@ import { PageHeader } from "@/components/common/page-header";
 import { ProjectsExplorer } from "@/features/projects/components/projects-explorer";
 import { PROJECTS } from "@/constants/projects";
 import { Card, CardContent, CardTitle } from "@/src/components/ui/card";
+import { absoluteUrl } from "@/lib/site";
 import { formatCompactNumber } from "@/utils/format";
+
+export const metadata: Metadata = {
+  title: "Projects by Vikram Baghel",
+  description:
+    "Explore selected projects by Vikram Baghel across web applications, mobile apps, dashboards, frontend systems, and product delivery work.",
+  alternates: {
+    canonical: absoluteUrl("/projects"),
+  },
+};
 
 const projectStats = [
   {

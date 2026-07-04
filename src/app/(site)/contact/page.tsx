@@ -1,4 +1,5 @@
-﻿import {
+﻿import type { Metadata } from "next";
+import {
   BoxesIcon,
   BriefcaseBusinessIcon,
   Code2Icon,
@@ -19,9 +20,19 @@ import { PageHeader } from "@/components/common/page-header";
 import { CONTACT_BACKEND_STACK, CONTACT_FRONTEND_STACK } from "@/constants/contact";
 import { SERVICE_CATEGORIES } from "@/constants/services";
 import { ContactForm } from "@/features/contact/components/contact-form";
+import { absoluteUrl } from "@/lib/site";
 import { createCaptchaChallenge } from "@/server/contact-captcha";
 import { Badge } from "@/src/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/src/components/ui/card";
+
+export const metadata: Metadata = {
+  title: "Contact Vikram Baghel",
+  description:
+    "Contact Vikram Baghel for website development, web application development, mobile app development, and backend project work.",
+  alternates: {
+    canonical: absoluteUrl("/contact"),
+  },
+};
 
 const FRONTEND_STACK_ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
   React: RiReactjsFill,

@@ -1,6 +1,17 @@
-﻿import { PageHeader } from "@/components/common/page-header";
+﻿import type { Metadata } from "next";
+import { PageHeader } from "@/components/common/page-header";
 import { AboutOverview } from "@/features/about/components/about-overview";
 import { ExperienceSection } from "@/features/home/components/experience-section";
+import { absoluteUrl } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: "About Vikram Baghel",
+  description:
+    "Learn about Vikram Baghel, a full stack developer in Chhattisgarh focused on React, Next.js, React Native, Node.js, Firebase, and scalable product delivery.",
+  alternates: {
+    canonical: absoluteUrl("/about"),
+  },
+};
 
 export default function AboutPage() {
   return (
@@ -20,4 +31,3 @@ export default function AboutPage() {
     </div>
   );
 }
-

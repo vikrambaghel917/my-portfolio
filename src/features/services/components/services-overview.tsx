@@ -10,15 +10,11 @@
   TargetIcon,
   TimerIcon,
 } from "lucide-react";
-import Link from "next/link";
-import { SERVICE_AREAS } from "@/constants/local-seo";
 import {
   SERVICE_CATEGORIES,
   SERVICE_PACKAGES,
-  SERVICE_POSITIONING,
 } from "@/constants/services";
 import { ExpertiseSection } from "@/features/home/components/expertise-section";
-import { Badge } from "@/src/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/src/components/ui/card";
 
 const serviceIcons = [
@@ -34,21 +30,6 @@ const serviceIcons = [
 export function ServicesOverview() {
   return (
     <div className="grid min-w-0 gap-8">
-      <Card className="surface surface-interactive overflow-hidden border-primary/14 bg-background/34 backdrop-blur-2xl">
-        <CardHeader className="relative space-y-4 p-6 lg:p-8">
-          <div aria-hidden className="hero-orb -top-16 right-0 size-32 bg-primary/14" />
-          <Badge variant="outline" className="w-fit rounded-full border-primary/20 bg-background/36 px-3 py-1 font-medium text-primary">
-            Services
-          </Badge>
-          <CardTitle className="max-w-4xl text-2xl sm:text-3xl">
-            Clear development services with scope, pricing, and delivery outcomes.
-          </CardTitle>
-          <p className="max-w-4xl text-sm font-medium leading-7 text-foreground/82">
-            {SERVICE_POSITIONING}
-          </p>
-        </CardHeader>
-      </Card>
-
       <section className="grid gap-4">
         <div className="space-y-2">
           <p className="text-label text-primary">Core Services</p>
@@ -166,30 +147,6 @@ export function ServicesOverview() {
         </div>
       </section>
 
-      <section className="grid gap-5">
-        <div className="space-y-2">
-          <p className="text-label text-primary">Service Areas</p>
-          <h2 className="text-title text-foreground">Chhattisgarh locations I target</h2>
-          <p className="max-w-3xl text-sm font-medium leading-7 text-foreground/78">
-            These location pages are tailored for businesses searching for website, app, and software development support in specific cities and districts.
-          </p>
-        </div>
-
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {SERVICE_AREAS.map((area) => (
-            <Link
-              key={area.slug}
-              href={`/locations/${area.slug}`}
-              className="rounded-[1rem] border border-border/50 bg-background/42 px-4 py-3 text-sm font-medium text-foreground/82 transition-colors hover:border-primary/30 hover:text-primary"
-            >
-              {area.city}
-              <span className="mt-1 block text-xs font-medium text-foreground/60">
-                {area.district}
-              </span>
-            </Link>
-          ))}
-        </div>
-      </section>
     </div>
   );
 }
