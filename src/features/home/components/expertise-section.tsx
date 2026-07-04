@@ -9,6 +9,7 @@ import { SectionHeader } from "@/components/common/section-header";
 import { CAPABILITIES } from "@/constants/portfolio";
 import { Badge } from "@/src/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/src/components/ui/card";
+import { cn } from "@/src/lib/utils";
 
 const capabilityIcons = [
   RocketIcon,
@@ -18,11 +19,15 @@ const capabilityIcons = [
   Layers3Icon,
 ] as const;
 
-export function ExpertiseSection() {
+type ExpertiseSectionProps = {
+  fullBleed?: boolean;
+};
+
+export function ExpertiseSection({ fullBleed = false }: ExpertiseSectionProps) {
   const slidingCapabilities = [...CAPABILITIES, ...CAPABILITIES];
 
   return (
-    <section className="section-block">
+    <section className="section-block min-w-0 max-w-full overflow-hidden">
       <div className="space-y-8">
         <div className="app-shell">
           <SectionHeader
@@ -32,7 +37,12 @@ export function ExpertiseSection() {
           />
         </div>
 
-        <div className="pause-on-hover relative left-1/2 w-screen -translate-x-1/2 overflow-hidden">
+        <div
+          className={cn(
+            "pause-on-hover min-w-0 max-w-full overflow-hidden",
+            fullBleed ? "relative left-1/2 w-screen -translate-x-1/2" : "relative w-full"
+          )}
+        >
           <div
             aria-hidden
             className="pointer-events-none absolute inset-y-0 left-0 z-10 hidden w-12 bg-linear-to-r from-background via-background/70 to-transparent sm:block sm:w-24"
@@ -41,14 +51,14 @@ export function ExpertiseSection() {
             aria-hidden
             className="pointer-events-none absolute inset-y-0 right-0 z-10 hidden w-12 bg-linear-to-l from-background via-background/70 to-transparent sm:block sm:w-24"
           />
-          <div className="animate-marquee flex w-max gap-5 py-2">
+          <div className="animate-marquee flex w-max min-w-0 gap-5 py-2">
             {slidingCapabilities.map((capability, index) => {
               const Icon = capabilityIcons[index % CAPABILITIES.length] ?? Layers3Icon;
 
               return (
                 <Card
                   key={`${capability.title}-${index}`}
-                  className="surface surface-interactive relative w-[19rem] shrink-0 overflow-hidden border-primary/14 bg-background/34 backdrop-blur-xl sm:w-[23rem] lg:w-[25rem]"
+                  className="surface surface-interactive relative w-[calc(100vw-2rem)] max-w-[19rem] shrink-0 overflow-hidden border-primary/14 bg-background/34 backdrop-blur-xl sm:w-[23rem] sm:max-w-none lg:w-[25rem]"
                 >
                   <CardHeader className="relative space-y-5 p-6">
                     <div

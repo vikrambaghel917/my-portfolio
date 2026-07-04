@@ -1,15 +1,20 @@
-import { SectionHeader } from "@/components/common/section-header";
+﻿import { SectionHeader } from "@/components/common/section-header";
 import { EXPERIENCE } from "@/constants/portfolio";
 import { Card, CardContent, CardHeader, CardTitle } from "@/src/components/ui/card";
+import { cn } from "@/src/lib/utils";
 
-export function ExperienceSection() {
+type ExperienceSectionProps = {
+  embedded?: boolean;
+};
+
+export function ExperienceSection({ embedded = false }: ExperienceSectionProps) {
   return (
-    <section className="app-shell section-block">
+    <section className={cn("section-block", embedded ? "" : "app-shell")}>
       <div className="space-y-8">
         <SectionHeader
           eyebrow="Experience"
           title="Professional experience across web, mobile, and Firebase-backed delivery"
-          description="I’ve spent most of my time simplifying operational complexity into clearer interfaces and reusable engineering patterns."
+          description="I've spent most of my time simplifying operational complexity into clearer interfaces and reusable engineering patterns."
         />
         <div className="grid gap-5">
           {EXPERIENCE.map((item) => (

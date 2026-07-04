@@ -1,24 +1,18 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { toast } from "sonner";
-import { FilterIcon, Layers3Icon, SparklesIcon } from "lucide-react";
+import { Layers3Icon, SparklesIcon } from "lucide-react";
 import { ConfirmationDialog } from "@/components/common/confirmation-dialog";
-import { Drawer } from "@/components/common/drawer";
 import { EmptyState } from "@/components/common/empty-state";
-import { FilterPanel } from "@/components/common/filter-panel";
 import { Pagination } from "@/components/common/pagination";
 import {
   PROJECTS,
   PROJECT_CATEGORY_OPTIONS,
-  PROJECT_SORT_OPTIONS,
-  PROJECT_STATUS_OPTIONS,
 } from "@/constants/projects";
 import { useProjectControls } from "@/hooks/use-project-controls";
 import type { ProjectItem } from "@/types/portfolio";
 import { Badge } from "@/src/components/ui/badge";
 import { Button } from "@/src/components/ui/button";
-import { Card, CardContent } from "@/src/components/ui/card";
 import {
   Sheet,
   SheetContent,
@@ -29,7 +23,6 @@ import {
 import { Tabs, TabsList, TabsTrigger } from "@/src/components/ui/tabs";
 import { ProjectCard } from "@/features/projects/components/project-card";
 import { ProjectDrawerContent } from "@/features/projects/components/project-drawer-content";
-import { ProjectTable } from "@/features/projects/components/project-table";
 
 const impactScore = (project: ProjectItem) =>
   project.metrics.reduce((score, metric) => score + metric.value.length, 0);
@@ -99,27 +92,9 @@ export function ProjectsExplorer() {
     };
   }, [page, pageSize, queryFilters]);
 
-  const handleCopyStack = async (project: ProjectItem) => {
-    await navigator.clipboard.writeText(project.stack.join(", "));
-    toast.success(`Copied the stack for ${project.title}.`);
-  };
-
   return (
     <div className="grid gap-6">
-      <div className="grid gap-4 xl:grid-cols-[18rem_1fr]">
-        <Card className="surface-subtle hidden h-fit border-primary/14 bg-background/34 xl:block">
-          <CardContent className="p-5">
-            <FilterPanel
-              filters={filters}
-              categoryOptions={PROJECT_CATEGORY_OPTIONS}
-              statusOptions={PROJECT_STATUS_OPTIONS}
-              sortOptions={PROJECT_SORT_OPTIONS}
-              onChange={updateFilters}
-            />
-          </CardContent>
-        </Card>
-
-        <div className="grid gap-4">
+      <div className="grid gap-4">
           <div className="surface-subtle flex flex-col gap-4 border-primary/14 bg-background/34 p-4">
             <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
               <div className="flex items-center gap-3">
@@ -129,29 +104,11 @@ export function ProjectsExplorer() {
                 <div>
                   <p className="text-sm font-semibold text-foreground">Project controls</p>
                   <p className="text-sm font-medium text-foreground/72">
-                    Filter the archive by category, status, and sort order.
+                    Browse the archive by category.
                   </p>
                 </div>
               </div>
               <div className="flex flex-wrap gap-3">
-                <Drawer
-                  trigger={
-                    <Button type="button" variant="outline" className="rounded-full xl:hidden">
-                      <FilterIcon />
-                      Filters
-                    </Button>
-                  }
-                  title="Project filters"
-                  description="Refine the project feed by category, status, or sort order."
-                >
-                  <FilterPanel
-                    filters={filters}
-                    categoryOptions={PROJECT_CATEGORY_OPTIONS}
-                    statusOptions={PROJECT_STATUS_OPTIONS}
-                    sortOptions={PROJECT_SORT_OPTIONS}
-                    onChange={updateFilters}
-                  />
-                </Drawer>
                 {isDirty ? (
                   <ConfirmationDialog
                     trigger={
@@ -216,12 +173,6 @@ export function ProjectsExplorer() {
                 ))}
               </div>
 
-              <ProjectTable
-                projects={projectsData.items}
-                onOpen={setSelectedProject}
-                onCopyStack={handleCopyStack}
-              />
-
               <Pagination
                 page={projectsData.page}
                 totalPages={projectsData.totalPages}
@@ -229,7 +180,6 @@ export function ProjectsExplorer() {
               />
             </>
           )}
-        </div>
       </div>
 
       <Sheet

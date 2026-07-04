@@ -7,11 +7,11 @@ import type {
 
 export const PROFILE = {
   name: "Vikram Baghel",
-  role: "Frontend Developer",
+  role: "Full Stack Developer",
   location: "Jagdalpur, Bastar, Chhattisgarh, India",
   availability: "Hire Me",
   summary:
-    "Frontend-focused developer building clean, scalable web and mobile products with React, Next.js, React Native, and Firebase.",
+    "Full stack developer building clean, scalable websites, web apps, and mobile products with React, Next.js, React Native, Node.js, and Firebase.",
 };
 
 export const HERO_METRICS: StatItem[] = [

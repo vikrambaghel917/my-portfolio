@@ -1,6 +1,8 @@
 /* @layer utilities {
   .app-shell {
     width: min(100%, var(--content-max));
+    max-width: 100%;
+    min-width: 0;
     padding-inline: var(--content-gutter);
     margin-inline: auto;
   }
@@ -207,6 +209,8 @@
 
   .surface {
     @apply border border-border/70 backdrop-blur-xl backdrop-saturate-125;
+    min-width: 0;
+    max-width: 100%;
     border-radius: var(--radius-panel);
     background: var(--surface);
     box-shadow: var(--shadow-medium);
@@ -214,6 +218,8 @@
 
   .surface-subtle {
     @apply border border-border/70 backdrop-blur-md backdrop-saturate-125;
+    min-width: 0;
+    max-width: 100%;
     border-radius: var(--radius-panel-inner);
     background: var(--surface-muted);
     box-shadow: var(--shadow-subtle);
@@ -221,6 +227,8 @@
 
   .surface-strong {
     @apply border border-border/60 backdrop-blur-xl backdrop-saturate-125;
+    min-width: 0;
+    max-width: 100%;
     border-radius: var(--radius-panel);
     background: var(--surface-strong);
     box-shadow: var(--shadow-strong);
@@ -353,6 +361,10 @@
   .animate-marquee {
     animation: marquee 34s linear infinite;
     will-change: transform;
+  }
+
+  .pause-on-hover {
+    max-width: 100%;
   }
 
   .pause-on-hover:hover .animate-marquee {

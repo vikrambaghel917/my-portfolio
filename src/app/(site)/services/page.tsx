@@ -1,5 +1,16 @@
+﻿import type { Metadata } from "next";
 import { PageHeader } from "@/components/common/page-header";
 import { ServicesOverview } from "@/features/services/components/services-overview";
+import { absoluteUrl } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: "Website, App, and Software Development Services in Chhattisgarh",
+  description:
+    "Website development, web app development, mobile app development, e-commerce builds, and backend development services for businesses across Chhattisgarh.",
+  alternates: {
+    canonical: absoluteUrl("/services"),
+  },
+};
 
 export default function ServicesPage() {
   return (
@@ -12,7 +23,7 @@ export default function ServicesPage() {
             <span>for web, mobile, backend, and product systems</span>
           </>
         }
-        description="A structured list of independent development services, productized packages, and delivery areas across websites, SaaS, mobile apps, APIs, dashboards, e-commerce, and architecture work."
+        description="A client-focused overview of what I build, which package fits, what it costs, and what you get at delivery."
       />
       <ServicesOverview />
     </div>

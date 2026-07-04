@@ -36,12 +36,18 @@ export type ExperienceItem = {
 
 export type ServiceCategory = {
   title: string;
-  items: string[];
+  summary: string;
+  idealFor: string;
+  includes: string[];
 };
 
 export type ServicePackage = {
   name: string;
+  price: string;
+  timeline: string;
+  bestFor: string;
   includes: string[];
+  deliverables: string[];
 };
 
 export type ProjectCategory =

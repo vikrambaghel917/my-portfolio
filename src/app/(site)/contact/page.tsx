@@ -46,11 +46,11 @@ const BACKEND_STACK_ICONS: Record<string, React.ComponentType<{ className?: stri
 };
 
 const CONTACT_SERVICE_GROUPS = [
-  "Website Development",
-  "Web Application Development",
-  "E-Commerce Development",
-  "Mobile App Development",
-  "Admin Dashboard Development",
+  "Business Websites",
+  "Web Applications",
+  "E-Commerce Systems",
+  "Mobile Applications",
+  "Backend and API Development",
 ];
 
 export default function ContactPage() {
@@ -130,11 +130,11 @@ export default function ContactPage() {
                   {slidingServices.map((service, index) => (
                     <div
                       key={`${service.title}-${index}`}
-                      className="w-[20rem] shrink-0 rounded-[1.35rem] border border-border/50 bg-background/46 p-4 shadow-[0_18px_50px_-30px_rgba(14,165,233,0.5)]"
+                      className="w-[calc(100vw-2rem)] max-w-[20rem] shrink-0 rounded-[1.35rem] border border-border/50 bg-background/46 p-4 shadow-[0_18px_50px_-30px_rgba(14,165,233,0.5)] sm:w-[20rem] sm:max-w-none"
                     >
                       <p className="text-sm font-semibold text-primary">{service.title}</p>
                       <div className="mt-3 flex flex-wrap gap-2">
-                        {service.items.map((item) => (
+                        {service.includes.map((item) => (
                           <Badge key={item} variant="secondary" className="font-medium">
                             {item}
                           </Badge>

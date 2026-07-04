@@ -1,15 +1,93 @@
 import type { Metadata } from "next";
 import { appHeading, appMono, appSans } from "@/app/fonts";
+import { PROFILE } from "@/constants/portfolio";
 import { AppProviders } from "@/components/providers/app-providers";
+import { absoluteUrl, getSiteUrl } from "@/lib/site";
 import "./globals.css";
 
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: PROFILE.name,
+  url: absoluteUrl("/"),
+  email: "mailto:baghelvikram917@gmail.com",
+  jobTitle: PROFILE.role,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Jagdalpur",
+    addressRegion: "Chhattisgarh",
+    addressCountry: "IN",
+  },
+  worksFor: {
+    "@type": "Organization",
+    name: PROFILE.name,
+  },
+  knowsAbout: [
+    "Website Development",
+    "Web Application Development",
+    "Mobile App Development",
+    "React",
+    "Next.js",
+    "React Native",
+    "Node.js",
+    "Firebase",
+  ],
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Vikram Baghel Portfolio",
+  url: absoluteUrl("/"),
+  author: {
+    "@type": "Person",
+    name: PROFILE.name,
+  },
+};
+
 export const metadata: Metadata = {
+  metadataBase: new URL(getSiteUrl()),
   title: {
-    default: "Vikram Baghel | Frontend Developer",
+    default: "Vikram Baghel | Full Stack Developer in Chhattisgarh",
     template: "%s | Vikram Baghel",
   },
   description:
-    "Portfolio website for Vikram Baghel, a frontend developer building scalable React, Next.js, React Native, and Firebase-powered web and mobile applications.",
+    "Vikram Baghel is a full stack developer in Chhattisgarh building websites, web apps, mobile apps, e-commerce platforms, and backend systems for businesses across Raipur, Jagdalpur, Bilaspur, Durg, Korba, and nearby districts.",
+  keywords: [
+    "Vikram Baghel",
+    "Vikram Baghel developer",
+    "Vikram Baghel portfolio",
+    "website developer in Chhattisgarh",
+    "web developer in Raipur",
+    "website development in Jagdalpur",
+    "full stack developer in Bilaspur",
+    "mobile app developer in Chhattisgarh",
+    "React developer in Chhattisgarh",
+    "Next.js developer in Raipur",
+    "freelance web developer in Bastar",
+  ],
+  alternates: {
+    canonical: absoluteUrl("/"),
+  },
+  openGraph: {
+    type: "website",
+    url: absoluteUrl("/"),
+    title: "Vikram Baghel | Full Stack Developer in Chhattisgarh",
+    description:
+      "Web, mobile, e-commerce, and backend development services for businesses across Chhattisgarh.",
+    siteName: "Vikram Baghel Portfolio",
+    locale: "en_IN",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vikram Baghel | Full Stack Developer in Chhattisgarh",
+    description:
+      "Web, mobile, e-commerce, and backend development services for businesses across Chhattisgarh.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -21,9 +99,17 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${appSans.variable} ${appHeading.variable} ${appMono.variable} h-full antialiased`}
+      className={`${appSans.variable} ${appHeading.variable} ${appMono.variable} h-full max-w-full overflow-x-clip antialiased`}
     >
-      <body className="min-h-full bg-background text-foreground">
+      <body className="min-h-full max-w-full overflow-x-clip bg-background text-foreground">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
         <AppProviders>{children}</AppProviders>
       </body>
     </html>
