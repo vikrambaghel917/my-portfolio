@@ -5,6 +5,7 @@ export const NAVIGATION_ITEMS: NavItem[] = [
   { href: ROUTES.home, label: "Home", description: "" },
   { href: ROUTES.services, label: "Services", description: "" },
   { href: ROUTES.projects, label: "Projects", description: "" },
+  { href: ROUTES.pricing, label: "Pricing", description: "" },
   { href: ROUTES.about, label: "About", description: "" },
   { href: ROUTES.contact, label: "Contact", description: "" },
 ];

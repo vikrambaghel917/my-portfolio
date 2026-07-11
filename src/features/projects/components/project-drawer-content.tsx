@@ -17,6 +17,13 @@ export function ProjectDrawerContent({
 }: ProjectDrawerContentProps) {
   return (
     <div className="grid gap-6 overflow-y-auto px-4 pb-6">
+      <div className="relative aspect-[16/9] overflow-hidden rounded-3xl border border-border/50">
+        <img
+          src={project.image}
+          alt={project.title}
+          className="h-full w-full object-cover"
+        />
+      </div>
       <div className="grid gap-3">
         <div className="flex flex-wrap gap-2">
           <Badge variant="outline" className="gap-2 rounded-full border-primary/18 bg-background/36 font-medium text-foreground/82">

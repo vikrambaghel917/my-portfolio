@@ -75,6 +75,8 @@ export type ProjectItem = {
   id: string;
   slug: string;
   title: string;
+  image: string;
+  liveUrl: string;
   client: string;
   summary: string;
   description: string;

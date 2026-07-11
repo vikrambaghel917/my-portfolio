@@ -6,8 +6,8 @@ import type {
 } from "@/types/portfolio";
 
 export const PROFILE = {
-  name: "Vikram Baghel",
-  role: "Full Stack Developer",
+  name: "Bnet Innovation",
+  role: "Turn your idea in to reality",
   location: "Jagdalpur, Bastar, Chhattisgarh, India",
   availability: "Hire Me",
   summary:

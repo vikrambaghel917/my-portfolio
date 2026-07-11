@@ -30,19 +30,16 @@ export function SiteFooter() {
       <div className="app-shell grid gap-10 py-12 lg:grid-cols-[1.2fr_0.8fr_0.8fr]">
         <div className="space-y-5">
           <Link href="/" className="flex items-center gap-3">
-            <span className="neon-ring flex size-10 items-center justify-center rounded-[1.15rem] bg-primary/88 text-sm font-semibold text-primary-foreground">
+          <span className="neon-ring flex size-40 items-center justify-center text-sm font-semibold text-primary-foreground">
               <Image
-                src="/me.png"
+                src="/BnetInnovation.png"
                 alt={`${PROFILE.name} profile visual`}
-                width={640}
-                height={640}
+                width={680}
+                height={700}
                 unoptimized
-                className="h-auto w-full rounded-full object-cover"
+                className="object-cover"
               />
-            </span>
-            <h2 className="text-xl font-semibold text-foreground">
-              {PROFILE.name}
-            </h2>
+          </span>
           </Link>
           <p className="max-w-xl text-sm leading-7 text-muted-foreground">
             Frontend and mobile engineering with a focus on scalable React

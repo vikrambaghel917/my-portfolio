@@ -114,7 +114,7 @@ export function ContactForm({ initialCaptcha }: ContactFormProps) {
           <div className="grid gap-5 md:grid-cols-2">
             <FormField
               id="company"
-              label="Company"
+              label="Organization or project"
               error={form.formState.errors.company?.message}
             >
               <Input id="company" {...form.register("company")} className="h-11 rounded-2xl" />
@@ -123,7 +123,6 @@ export function ContactForm({ initialCaptcha }: ContactFormProps) {
               id="phone"
               label="Phone number"
               error={form.formState.errors.phone?.message}
-              hint="Include country code if you expect an international call or WhatsApp message."
             >
               <Input
                 id="phone"
@@ -132,6 +131,9 @@ export function ContactForm({ initialCaptcha }: ContactFormProps) {
                 className="h-11 rounded-2xl"
               />
             </FormField>
+            <p className="text-sm text-muted-foreground md:col-span-2">
+              Include country code if you expect an international call or WhatsApp message.
+            </p>
           </div>
 
           <FormField

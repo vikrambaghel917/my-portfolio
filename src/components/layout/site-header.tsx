@@ -35,24 +35,16 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-border/40 bg-background/36 backdrop-blur-2xl">
       <div className="app-shell flex h-18 items-center justify-between gap-3">
         <Link href={ROUTES.home} className="min-w-0 flex items-center gap-3">
-          <span className="neon-ring flex size-10 shrink-0 items-center justify-center rounded-[1.15rem] bg-primary/88 text-sm font-semibold text-primary-foreground">
+          <span className="neon-ring flex size-18 items-center justify-center text-sm font-semibold text-primary-foreground">
               <Image
-                src="/me.png"
+                src="/BnetInnovation.png"
                 alt={`${PROFILE.name} profile visual`}
                 width={640}
-                height={640}
+                height={960}
                 unoptimized
-                className="h-auto w-full rounded-full object-cover"
+                className="object-cover"
               />
           </span>
-          <div className="min-w-0">
-            <p className="truncate text-sm font-semibold text-foreground sm:text-base">
-              {PROFILE.name}
-            </p>
-            <p className="truncate text-xs text-muted-foreground sm:text-sm">
-              {PROFILE.role}
-            </p>
-          </div>
         </Link>
 
         <nav className="hidden items-center gap-1 rounded-full border border-border/40 bg-background/32 p-1 shadow-theme-subtle backdrop-blur-xl md:flex">

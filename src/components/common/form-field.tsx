@@ -24,7 +24,9 @@ export function FormField({
       </label>
       {children}
       {error ? (
-        <p className="text-sm text-destructive">{error}</p>
+        <p className="text-sm text-destructive" aria-live="polite">
+          {error}
+        </p>
       ) : hint ? (
         <p className="text-sm text-muted-foreground">{hint}</p>
       ) : null}

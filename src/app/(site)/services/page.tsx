@@ -23,7 +23,7 @@ export default function ServicesPage() {
             <span>for web, mobile, backend, and product systems</span>
           </>
         }
-        description="A client-focused overview of what I build, which package fits, what it costs, and what you get at delivery."
+        description="A client-focused overview of what I build, how each engagement is positioned, and which service is the right fit for the problem."
       />
       <ServicesOverview />
     </div>

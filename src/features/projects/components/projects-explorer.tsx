@@ -49,7 +49,7 @@ export function ProjectsExplorer() {
     setPage,
     updateFilters,
     resetFilters,
-  } = useProjectControls();
+  } = useProjectControls(PROJECTS.length);
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);
   const projectsData = useMemo(() => {
     let filtered = PROJECTS.filter((project) => matchesText(project, queryFilters.search));
@@ -163,7 +163,7 @@ export function ProjectsExplorer() {
             />
           ) : (
             <>
-              <div className="grid gap-4 lg:grid-cols-2">
+              <div className="grid gap-4 lg:grid-cols-3">
                 {projectsData.items.map((project) => (
                   <ProjectCard
                     key={project.id}

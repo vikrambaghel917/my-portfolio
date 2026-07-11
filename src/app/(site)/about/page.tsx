@@ -20,8 +20,8 @@ export default function AboutPage() {
         eyebrow="About"
         title={
           <>
-            <span className="text-primary">Frontend and backend</span>{" "}
-            <span>full stack developer</span>
+            <span className="text-primary">full stack</span>{" "}
+            <span>developer</span>
           </>
         }
         description="A concise view of who I am, how I build, and the product systems I focus on across web, mobile, and backend-connected delivery."

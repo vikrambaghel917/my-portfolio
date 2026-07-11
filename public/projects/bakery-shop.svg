@@ -1,0 +1,24 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" rx="36" fill="#FFF8F1"/>
+  <rect x="56" y="56" width="1488" height="788" rx="30" fill="#4A2C2A"/>
+  <rect x="110" y="110" width="1380" height="220" rx="28" fill="#F5D0A9"/>
+  <rect x="110" y="360" width="320" height="430" rx="26" fill="#6B3E36"/>
+  <rect x="462" y="360" width="474" height="430" rx="26" fill="#7C4A3A"/>
+  <rect x="968" y="360" width="522" height="430" rx="26" fill="#8F5B46"/>
+  <circle cx="1310" cy="220" r="94" fill="#F59E0B"/>
+  <rect x="164" y="162" width="504" height="28" rx="14" fill="#7C2D12"/>
+  <rect x="164" y="216" width="412" height="20" rx="10" fill="#92400E"/>
+  <rect x="164" y="254" width="352" height="20" rx="10" fill="#92400E"/>
+  <rect x="164" y="288" width="176" height="50" rx="18" fill="#4A2C2A"/>
+  <rect x="154" y="420" width="232" height="180" rx="24" fill="#EAD7C3"/>
+  <rect x="506" y="420" width="386" height="116" rx="24" fill="#FDE68A"/>
+  <rect x="506" y="566" width="386" height="168" rx="24" fill="#F5E7DA"/>
+  <rect x="1012" y="420" width="430" height="314" rx="24" fill="#F7C6A3"/>
+  <rect x="554" y="454" width="292" height="18" rx="9" fill="#92400E"/>
+  <rect x="554" y="486" width="248" height="18" rx="9" fill="#B45309"/>
+  <rect x="1056" y="470" width="340" height="20" rx="10" fill="#7C2D12"/>
+  <rect x="1056" y="510" width="300" height="16" rx="8" fill="#92400E"/>
+  <rect x="1056" y="542" width="316" height="16" rx="8" fill="#92400E"/>
+  <text x="150" y="748" fill="#FFF7ED" font-family="Arial, sans-serif" font-size="54" font-weight="700">Bakery Shop</text>
+  <text x="150" y="796" fill="#FDE7D3" font-family="Arial, sans-serif" font-size="28">Live bakery storefront with featured products, warm visual branding, and curated discovery flow</text>
+</svg>

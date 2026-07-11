@@ -1,0 +1,20 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" rx="36" fill="#F8F6F1"/>
+  <rect x="56" y="56" width="1488" height="788" rx="30" fill="#111827"/>
+  <rect x="104" y="104" width="1392" height="114" rx="24" fill="#172135"/>
+  <rect x="104" y="248" width="420" height="540" rx="26" fill="#18263C"/>
+  <rect x="552" y="248" width="944" height="246" rx="26" fill="#1B2B46"/>
+  <rect x="552" y="522" width="456" height="266" rx="26" fill="#6D28D9"/>
+  <rect x="1040" y="522" width="456" height="266" rx="26" fill="#0F766E"/>
+  <rect x="150" y="156" width="324" height="18" rx="9" fill="#334155"/>
+  <rect x="1232" y="138" width="212" height="48" rx="18" fill="#2563EB"/>
+  <rect x="150" y="304" width="326" height="144" rx="24" fill="#223553"/>
+  <rect x="150" y="480" width="326" height="252" rx="24" fill="#111827"/>
+  <rect x="604" y="304" width="300" height="144" rx="24" fill="#223553"/>
+  <rect x="926" y="304" width="258" height="144" rx="24" fill="#1E8D74"/>
+  <rect x="1206" y="304" width="238" height="144" rx="24" fill="#2B5FD0"/>
+  <path d="M632 686C680 626 726 660 782 602C838 544 904 584 960 556" stroke="#F9FAFB" stroke-width="14" stroke-linecap="round"/>
+  <path d="M1116 686C1162 638 1202 662 1252 620C1302 578 1366 598 1420 560" stroke="#D1FAE5" stroke-width="14" stroke-linecap="round"/>
+  <text x="150" y="744" fill="#F3F4F6" font-family="Arial, sans-serif" font-size="54" font-weight="700">Business CRM Dashboard</text>
+  <text x="150" y="792" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="28">Live pipeline, lead, and sales operations workspace for enterprise teams</text>
+</svg>

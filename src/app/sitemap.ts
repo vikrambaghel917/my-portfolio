@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: ROUTES.home, priority: 1, changeFrequency: "weekly" as const },
     { path: ROUTES.services, priority: 0.9, changeFrequency: "weekly" as const },
     { path: ROUTES.projects, priority: 0.8, changeFrequency: "monthly" as const },
+    { path: ROUTES.pricing, priority: 0.8, changeFrequency: "monthly" as const },
     { path: ROUTES.about, priority: 0.7, changeFrequency: "monthly" as const },
     { path: ROUTES.contact, priority: 0.9, changeFrequency: "monthly" as const },
   ];

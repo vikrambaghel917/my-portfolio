@@ -10,7 +10,7 @@ export function SiteShell({ children }: SiteShellProps) {
     <div className="relative min-h-screen overflow-x-clip">
       <div
         aria-hidden
-        className="hero-orb top-16 left-[-8rem] hidden size-72 bg-primary/20 sm:block sm:size-96"
+        className="hero-orb top-16 left-[-8rem] hidden  bg-primary/20 sm:block sm:size-96"
       />
       <div
         aria-hidden
@@ -22,7 +22,7 @@ export function SiteShell({ children }: SiteShellProps) {
       />
       <span id="top" className="sr-only" />
       <SiteHeader />
-      <main className="relative z-10 pb-8 sm:pb-12">{children}</main>
+      <main className="relative z-10 pb-4 sm:pb-12">{children}</main>
       <SiteFooter />
     </div>
   );
